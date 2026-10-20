@@ -27,5 +27,9 @@ pipeline {
                 }
             }
         }
+        post {
+            failure {
+                echo 'ALERT: disk check failed on at least one agent'
+        }
     }
 }
